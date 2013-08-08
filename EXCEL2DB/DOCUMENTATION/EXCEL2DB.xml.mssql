@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EXCEL2DB>
+  <db>
+    <driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</driver>
+    <url>jdbc:sqlserver://localhost;DatabaseName=meetingcheck</url>
+    <username>sa</username>
+    <password>123456</password>
+    <target>t_user</target>
+  </db>
+  <excel>
+      <column index="0" tcname="mid" tctype="String" isfk="false" parent_key=""/>
+      <column index="1" tcname="name" tctype="String" isfk="false" parent_key=""/>
+      <column index="2" tcname="type" tctype="String" isfk="false" parent_key=""/>
+      <column index="3" tcname="company" tctype="String" isfk="false" parent_key=""/>
+      <column index="4" tcname="address" tctype="String" isfk="false" parent_key=""/>
+      <column index="5" tcname="phone" tctype="String" isfk="false" parent_key=""/>
+      <column index="6" tcname="email" tctype="String" isfk="false" parent_key=""/>
+      <column index="7" tcname="bak1" tctype="String" isfk="false" parent_key=""/>
+  </excel>
+</EXCEL2DB>

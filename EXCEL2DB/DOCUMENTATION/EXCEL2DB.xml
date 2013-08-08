@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EXCEL2DB>
+  <db>
+    <driver>oracle.jdbc.driver.OracleDriver</driver>
+    <url>jdbc:oracle:thin:@localhost:1521:ORCL</url>
+    <username>MAZQ</username>
+    <password>123456</password>
+    <target>TABLE1</target>
+  </db>
+
+  <excel>
+  	  <sheet>
+  	  	<sheetname>Sheet3</sheetname>
+  	  	<rownum>0</rownum>
+  	  </sheet>
+      <column index="0" tcname="ID" tctype="String" handler="cn.ecoinfo.excel.handler.UUIDHandler" />
+
+      <column index="0" tcname="NAME" tctype="String" />
+      <column index="1" tcname="GDP1" tctype="String" />
+  </excel>
+</EXCEL2DB>

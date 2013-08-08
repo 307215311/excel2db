@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EXCEL2DB>
+  <db>
+    <driver>com.mysql.jdbc.Driver</driver>
+    <url>jdbc:mysql://localhost:3306/e2d</url>
+    <username>root</username>
+    <password>123456</password>
+    <target>user</target>
+  </db>
+  <parents>
+  	<parent tablename="dept" key="id" compare="name" />
+  	<parent tablename="region" key="id" compare="name" />
+  </parents>
+  <excel>
+      <column index="0" tcname="username" tctype="String" isfk="false" parent_key=""/>
+      <column index="1" tcname="did" tctype="String" isfk="true" parent_key="dept"/>
+      <column index="2" tcname="rid" tctype="String" isfk="true" parent_key="region"/>
+      <column index="3" tcname="cost" tctype="String" isfk="false" parent_key=""/>
+  </excel>
+</EXCEL2DB>

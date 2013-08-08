@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2013 (http://www.altova.com) by  () -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="EXCEL2DB">
+		<xs:annotation>
+			<xs:documentation>Comment describing your root element</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="db">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="driver">
+								<xs:annotation>
+									<xs:documentation>数据库的驱动类</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="url">
+								<xs:annotation>
+									<xs:documentation>数据库的连接串</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="username">
+								<xs:annotation>
+									<xs:documentation>数据库用户名</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="password">
+								<xs:annotation>
+									<xs:documentation>数据库密码</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="target">
+								<xs:annotation>
+									<xs:documentation>数据库表名</xs:documentation>
+								</xs:annotation>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="parents">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="parent">
+								<xs:complexType>
+									<xs:attribute name="tablename">
+										<xs:annotation>
+											<xs:documentation>父表表名</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+									<xs:attribute name="key">
+										<xs:annotation>
+											<xs:documentation>父表主键列名</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+									<xs:attribute name="compare">
+										<xs:annotation>
+											<xs:documentation>父表比较列名</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="excel">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="column">
+								<xs:complexType>
+									<xs:attribute name="index" use="required">
+										<xs:annotation>
+											<xs:documentation>列下标，从0开始</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+									<xs:attribute name="tcname" use="required">
+										<xs:annotation>
+											<xs:documentation>对应数据库表的列名</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+									<xs:attribute name="tctype" use="required">
+										<xs:annotation>
+											<xs:documentation>对应数据库表的列类型</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+									<xs:attribute name="handler">
+										<xs:annotation>
+											<xs:documentation>指定相应的处理类</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="sheet">
+								<xs:complexType>
+									<xs:attribute name="sheetname">
+										<xs:annotation>
+											<xs:documentation>需要处理的sheet名称</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+									<xs:attribute name="rownum">
+										<xs:annotation>
+											<xs:documentation>指定从第几行读取，从0开始</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
